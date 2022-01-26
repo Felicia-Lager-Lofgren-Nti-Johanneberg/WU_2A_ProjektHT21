@@ -1,0 +1,449 @@
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;700&display=swap');
+
+  /*FÖRSTA SIDAN*/
+
+  #flex {
+    display: grid;
+    grid-template-areas: 
+        
+        "lo ar"
+        "me me"
+      ;
+      
+    grid: template columns 50% 50%  ;
+    grid-template-rows: 10% 90%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(247, 238, 222, 0);
+}
+
+
+#article {
+  grid-area: ar;
+  color: rgb(223, 205, 161);
+    height: 25rem;
+    width: 25rem;
+    border: 15px solid rgba(0, 0, 0, 0.452);
+    padding: 2rem;
+    margin: 5rem;
+    margin-top: 6rem;
+    margin-left: 50rem;
+    background-color: rgba(1, 85, 36, 0.411);
+    position: absolute;
+          
+  }
+
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 50%;
+    }
+  
+    to {
+      margin-left: 40%;
+      width: 10%;
+    }
+  }
+
+  .NEKO_SUSHI {
+    color: rgb(255, 255, 255);
+    top: 5rem;
+    font-size: 2rem;
+    animation-duration: 15s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    background-color: rgb(119, 0, 0);
+  }
+
+  #logoimg {
+    top: 70px;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+}
+
+
+  #imgbox {
+    top: 1px;
+    position: absolute;
+}
+
+  #flexmenu {
+    display: grid;
+    grid-template-areas: 
+        "h1 h2"
+    ;      
+    
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 100%;
+    width: 100vw;
+    height: 300vh;
+    display: absolute;
+    background-color: rgb(0, 0, 0);
+    padding: 40px;
+    font-size: 3rem;
+}
+
+
+  #headermenu {
+    grid-area: h1;
+    background-color: rgba(150, 72, 124, 0);
+    padding: 10rem;
+    font-family: 'Noto Serif JP', serif;
+}
+
+  #headermenu2 {
+    grid-area: h2;
+    background-color: rgba(106, 35, 22, 0);
+    padding: 10rem;
+}
+
+  .####vertical_line {
+    border-left: 6px solid rgb(98, 0, 255);
+    height: 1000px;
+    text-decoration-line: underline;
+    right: 40rem;
+    position: absolute;
+}
+
+  .flex_opening {
+    display: grid;
+    grid-template-areas: 
+        "a1 a2"
+    ;      
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 100%;
+    width: 100vw;
+    height: 300vh;
+  }
+
+/* Navbar*/
+
+  #nav {
+    position: absolute;
+    top: 1rem;
+    display: flex;
+    grid-area: na;
+    background-color: rgba(102, 31, 31, 0.733);
+    
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;  
+  }
+
+  #nav a {
+    float: left;
+    display: block;
+    color: rgb(223, 205, 161); 
+    text-align: right;
+    font-weight: bold;
+    padding: 1px 16px;
+    text-decoration: none;
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-family: 'Noto Serif JP', serif;
+
+    
+  }
+  #nav a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(180, 53, 53);
+    font-family: 'Kaisei HarunoUmi', serif;
+    cursor: none;
+  }
+
+  #nav_reservation
+  {
+    display: flex;
+    grid-area: na;
+    background-color: rgba(0, 0, 0, 0.774);
+    
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  #nav_reservation a {
+    float: left;
+    display: block;
+    color: red;
+    text-align: right;
+    font-weight: bold;
+    padding: 1px 16px;
+    text-decoration: none;
+    
+    
+  }
+  #nav_reservation a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: black;
+    font-family: 'Kaisei HarunoUmi', serif; 
+   }
+
+  .flex-top {    
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 1,5rem;
+    color: rgb(223, 205, 161);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Kaisei HarunoUmi', serif;
+  }
+
+  .flex-bottom {    
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 4%;
+    color: rgb(223, 205, 161);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Kaisei HarunoUmi', serif;
+   
+  }
+
+/* När man hoovrar över menyn*/
+  
+  .overlay {
+    position: absolute;
+    top: 50rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #b100008d;
+    font-family: 'Ceviche One', cursive;
+
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+    .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Kaisei HarunoUmi', serif;
+
+  }
+
+/* OPENING HOURS HTML */
+
+
+/* Navbar */
+
+#nav_opening {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  grid-area: na;
+  background-color: rgba(0, 0, 0, 0.212);
+  
+  display: block;
+  color: rgb(223, 205, 161);
+  text-align: center;
+  padding: 14px 16px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+#nav_opening a {
+  float: left;
+  display: block;
+  color: rgb(223, 205, 161);
+  text-align: right;
+  font-weight: bold;
+  padding: 1px 16px;
+  text-decoration: none;
+  font-family: 'Kaisei HarunoUmi', serif;
+
+  
+  }
+  #nav_opening a:hover {
+    background: rgba(192, 11, 11, 0);
+    color: rgb(194, 24, 24);
+    font-family: 'Kaisei HarunoUmi', serif;
+    cursor: none;
+  }
+
+  #nav_reservation_opening
+  {
+    display: flex;
+    grid-area: na;
+    background-color: rgba(49, 116, 35, 0.774);
+    
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1rem;
+    
+  }
+
+  #nav_reservation_opening a {
+    float: left;
+    display: block;
+    color: (223, 205, 161);
+    text-align: right;
+    font-weight: bold;
+    padding: 1px 16px;
+    text-decoration: none;
+    
+  
+}
+#nav_reservation_opening a:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: black;
+  font-family: 'Kaisei HarunoUmi', serif; 
+ }
+
+/* Öppetiderna*/
+
+.opening_hours{
+    grid-area: a1;
+    color: rgb(223, 205, 161);
+    position: relative;
+    top: 5rem;
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-size: 40px;
+    left: 1rem;
+}
+
+  .mon_tue_wed_thu{
+    color: rgb(223, 205, 161);
+    position: relative;
+    top: 5rem;
+    font-size: 2rem;
+    left: 5rem;
+}
+
+  .fri_sat_sun {
+    color: rgb(223, 205, 161);
+    position: relative;
+    top: 6rem;
+    font-size: 2rem;
+    left: 5rem;
+}
+
+.img_opening_hours {
+    grid-area: a2;
+    top: 3rem;
+    right: 1rem;
+}
+
+
+body { 
+  font-family: Avenir, sans-serif; margin: 0; 
+  background-color: rgb(29, 29, 29);
+}
+
+
+
+*, *:after, *:before {
+  padding:0;
+  margin:0;
+}
+
+
+ul {
+  position:absolute;
+  top: 2000px;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  list-style:none;
+  width:955px;
+  height:450px;
+  border-radius:3px;
+  overflow:hidden;
+  box-shadow:1px 1px 3px 1px;
+  grid-area: h1;
+  bottom: 4rem;
+ 
+}
+
+
+li {
+  position:relative;
+  width:190px;
+  height:450px;
+  float:left;
+  border-left:1px solid white;
+  -webkit-transition:all 0.7s;
+  -moz-transition:all 0.7s;
+  transition:all 0.7s;
+  box-shadow:-2px 0 10px 2px;
+  
+}
+
+ul li:first-child {
+  border:none;
+}
+
+span {
+  display:block;
+  position:absolute;
+  bottom:0;
+  width:50%;
+  color:rgb(255, 255, 255);
+  white-space:nowrap;
+  padding:20px;
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); 
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); 
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+  background: -o-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+  background: -ms-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+  background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); 
+
+}
+
+img {
+  width: 1280px;
+  height:545px;
+}
+
+ul:hover li {
+  width:50px;  
+}
+
+
+ul li:hover {
+  width:750px;
+}
+
+
